@@ -1,1 +1,124 @@
-<p>home works!</p>
+<!-- First Section -->
+<div class="tarff-container">
+<div class="first-section"  width="100%" >
+    <div class="first-section-content container">
+  
+    <h1 class="first-section-header" ><span *ngFor="let word of words" class="header-animate">{{ word }} </span>
+    </h1>
+    <div class="first-section-text mx-auto" >Tarff Valley is an Agricultural Merchant supplying
+      farmers and the rural community across Southern
+      Scotland, Northern England and Ayrshire with a wide
+      range of quality products and services. As Scotland’s 
+      <span *ngIf="showContent" class="first-section-text mx-auto">oldest Agricultural Co-operative being in business since
+       1903, we provide our customers and members with all 
+      their farming needs, sourcing the best possible prices
+       from a top range of suppliers.</span>
+       <a (click)="toggleContent()" class="read-more d-inline-block">{{showContent ? 'Read less' : 'Read more...'}}</a>
+      </div>
+       <div class="row social-media d-flex justify-content-center">
+          <a href="https://www.facebook.com/tarff.valley/" class="icon-link"><img src="../../assets/TarrfWebsite/Icons/SVG/facebook-app-symbol.svg"class="social-icon"/></a>
+          <a href="https://twitter.com/TarffValley" class="icon-link"><img src="../../assets/TarrfWebsite/Icons/SVG/twitter (1).svg"class="social-icon"/></a>
+          <a href="https://www.linkedin.com/company/tarff-valley" class="icon-link"><img src="../../assets/TarrfWebsite/Icons/SVG/linkedin.svg"class="social-icon"/></a>
+          <a href="https://www.instagram.com/tarffvalley/" class="icon-link"><img src="../../assets/TarrfWebsite/Icons/SVG/instagram (1).svg"class="social-icon"/></a>
+  
+       </div>
+  </div>
+  </div>
+  <!-- Second Section -->
+  <div class="second-section container" width="100%">
+  <h1 class="main-header">Our Products</h1>
+  <div class="secondry-section-text mb-5">Our product range includes Animal Feed, Fertiliser, Animal Health and Equipment, Agronomy, Hardware, Clothing and Footwear and much more. We also offer a number of services such as silage analysis, soil sampling and ration mixes. We are a whole farm solution, providing farmers with all their agricultural needs.</div>
+  <div class="view-all ">View All <span class="view-icon"><svg class="view-icon" width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path  class="view-icon" d="M1.4 12L0 10.6L4.575 6L0 1.4L1.4 0L7.4 6L1.4 12ZM8 12L6.6 10.6L11.175 6L6.6 1.4L8 0L14 6L8 12Z" fill="#191919"/>
+    </svg>
+    </span></div>
+
+  <div class="carousel-container mt-5">
+    <div class="carousel-track"  #carouselTrack>
+      <div class="carousel-card position-relative" *ngFor="let card of Cards" 
+      style="background-image: url('{{ card.backgroundImg }}');">
+      <div class="card-title">{{card.cardTitle}}</div>
+      </div>
+      
+    </div>
+    <button class="carousel-nav carousel-nav-prev" (click)="moveCarousel('left')">&#8249;</button>
+   <button class="carousel-nav carousel-nav-next" (click)="moveCarousel('right')">&#8250;</button>
+  </div>
+  <div class="btn all-products mt-4">All Products</div>
+  </div>
+
+  <!-- Third Section -->
+  <div class="third-section " width="100%">
+    <h1 class="main-header">Our Services</h1>
+    <div class="secondry-section-text mb-5 w-80">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, sint! Magni ab asperiores dolor quidem error corporis qui ratione dolore distinctio. Hic architecto odit et velit animi provident, quidem quaerat?</div>
+    <div class="section-content row d-flex justify-content-center align-items-center w-100 ">
+    
+      <div class="col-3 ms-5 ">
+        <div class="col-img">
+        <img src="../../assets/TarrfWebsite/Icons/SVG/growth.svg">
+      </div>
+        <div class="col-title">silage analysis</div>
+        <div class="col-content">Analysis of silage allows 
+          us to determine important 
+          parameters such as dry matter
+          , crude protein, metabolic energy, 
+          fibre content and also the preservation 
+          </div>
+
+      </div>
+      <div class="col-3 ">
+        <div class="col-img">
+          <img src="../../assets/TarrfWebsite/Icons/SVG/plant.svg">
+        </div>
+                <div class="col-title">soil sampling</div>
+        <div class="col-content">Soil testing is an essential component of soil resource management. 
+          Each sample collected must be a true representative
+           of the area being sampled</div>
+      </div>
+      <div class="col-3 ">
+        <div class="col-img">
+          <img src="../../assets/TarrfWebsite/Icons/SVG/sapling.svg">
+        </div>
+        <div class="col-title">ration mixes</div>
+        <div class="col-content">Soil testing is an essential component of soil resource management. 
+          Each sample collected must be a true representative
+           of the area being sampled</div>
+      </div>
+    </div>
+   
+
+  </div>
+
+  <!-- Fourth Section -->
+  <div class="fourth-section container" width="100%">
+    <h1 class="main-header">Our Partners</h1>
+    <div class="secondry-section-text mb-5 w-80">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, sint! Magni ab asperiores dolor quidem error corporis qui ratione dolore distinctio. Hic architecto odit et velit animi provident, quidem quaerat?</div>
+    <div class="carousel-container">
+      <div class="carousel-track">
+        <div class="carousel-card">
+         <img src="../../assets/TarrfWebsite/Logos/Rectangle 30.png"> 
+        </div>
+        <div class="carousel-card">
+          <img src="../../assets/TarrfWebsite/Logos/Rectangle 31.png">    
+             </div>
+        <div class="carousel-card">
+          <img src="../../assets/TarrfWebsite/Logos/Rectangle 32.png">        
+         </div>
+        <div class="carousel-card">
+          <img src="../../assets/TarrfWebsite/Logos/Rectangle 33.png">      
+           </div>
+        <div class="carousel-card">
+          <img src="../../assets/TarrfWebsite/Logos/Rectangle 34.png">       
+          </div>
+        <div class="carousel-card">
+          <img src="../../assets/TarrfWebsite/Logos/Rectangle 35.png">       
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fifth Section -->
+  <div class="fifth-section container" width="100%">
+    <h1 class="main-header">Our Branches</h1>
+  </div>
+</div>
