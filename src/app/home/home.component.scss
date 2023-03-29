@@ -179,7 +179,7 @@
     flex-wrap: wrap;
     margin-top: 100px;
     .secondry-section-text{
-      width: 81%;
+      width: 85%;
     }
   .section-content{
     height: 400px;
@@ -193,7 +193,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 100px;
+    margin-left: 145px;
   }
   .col-title{
     
@@ -223,6 +223,9 @@ text-align: center;
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 100px;
+    .secondry-section-text{
+      width: 88%;
+    }
   }
 
   .fifth-section{
@@ -230,6 +233,85 @@ text-align: center;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    .secondry-section-text{
+      width: 80%;
+    }
+    .location-card{
+      width: 488px;
+      height: 99px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 23px 15px;
+        background: #FFFFFF;
+      box-shadow: 0px 32px 45px rgba(0, 0, 0, 0.08);
+        border-radius: 6px;
+        margin-top: 10px;
+    }
+    .location-arrow{
+      width: 34px;
+      height: 34px;
+      background-color: #D81200;
+    }
+   
+  }
+
+  //sixith section 
+  .sixith-section{
+    background:url('../../assets/TarrfWebsite/Image/login.jpg') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    .form-container{
+      height: 595px;
+      width: 590px;
+      border-radius: 20px;     
+background: rgba(112, 112, 112, 0.59);
+box-shadow: 0px 24px 48px -12px rgba(85, 105, 135, 0.06);
+display: flex;
+flex-direction: column;
+.form-elements {
+  width: 70%;
+  margin-left: 30px;
+  margin-top: 60px;
+}
+.submit-button{
+  background-color: #FFFFFF;
+  color: #D81200;
+  font-size: 24px;
+  width: 380px;
+  height: 50px;
+  margin-top: 100px;
+  margin-left: 100px;
+}
+
+    }
+    .header{
+      font-family: 'Lemon';
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 42px;
+      color: #FFFFFF;
+      margin-top: 200px;
+      margin-left: 50px;
+
+    }
+    .sub-header{
+      font-family: 'Lato';
+font-size: 40px;
+font-weight: 400;
+line-height: 48px;
+margin-left: 50px;
+
+color:white;
+.span-color{
+  color:#D81200;
+}
+    }
   }
 //common styles
   .main-header{
