@@ -3,7 +3,7 @@
     background:url('../../assets/TarrfWebsite/Image/main.jpg') ;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 600px;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -11,10 +11,12 @@
      /* Header Animation */
      @keyframes word-by-word-animation {
       0% {
+        visibility: hidden;
         opacity: 0;
         transform: translateY(-20px);
       }
       100% {
+        visibility: visible;
         opacity: 1;
         transform: translateY(0);
       }
@@ -50,10 +52,11 @@
       font-weight: 400;
       line-height: 84px;
       color:#FFFFFF;
-    
+    visibility: hidden;
     
     }
-   
+  
+
     .first-section-text{
       font-family: 'League Spartan','Lato',sans-serif;
       font-size: 24px;
@@ -106,22 +109,20 @@
   .view-all{
     font-family:'Lato';
     font-size: 24px;
-    position: absolute;
-    left:140px;
-    top: 1066px
+   display: flex;
+   justify-content: flex-start;
   
   }
   
 
   .view-all:hover{
     color:#D81200;
-  }
-  .view-icon{
-    fill:black;
-  }
-  .view-icon:hover{
     fill:#D81200;
+    .view-icon{
+      fill:#D81200;
+    }
   }
+ 
   
   
   .card-title{
@@ -141,8 +142,6 @@
   top: 1281px;
   border-radius: 50%;
   transform: translateY(-50%);
-  background-color: #D81200;
-  color: #ffff;
   font-size: 40px;
   width: 45px;
   height: 45px;
@@ -156,10 +155,29 @@
   
   .carousel-nav-prev {
     left: 50px;
+    background-color: #FFFFFF;
+    border: solid #D81200 2px;
   }
   
   .carousel-nav-next {
     right:50px;
+    background-color: #D81200;
+  }
+  .carousel-card:hover{
+    .card-title{
+      font-size: 22px;
+    }
+    .card-container::after{
+      content:"Read More";
+      position: absolute;
+      bottom: 20px;
+      left: 2px;
+      font-size: 20px;
+      font-weight: 600;
+      color:#FFFFFF;
+      text-decoration: underline;
+      transition: opacity 0.3s ease-in-out;
+    }
   }
    .all-products{
     background-color: #D81200;
@@ -167,6 +185,7 @@
     height: 42px;
     color: #FFFFFF;
    }
+   
   }
 
 
@@ -182,8 +201,13 @@
       width: 85%;
     }
   .section-content{
-    height: 400px;
+    height: 600px;
     background-color: rgba(216, 18, 0, 0.14);
+  }
+  .col-align{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .col-img{
     background-color: #D81200;
@@ -193,8 +217,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 145px;
+    margin-left: 0px;
+    .svg-img-hover{
+      display: none;
+    }
   }
+  .col-img:hover{
+    background-color: #FFFFFF;
+    .svg-img-hover{
+      display: block;
+    }
+    .svg-img{
+      display: none;
+    }
+  }
+  
   .col-title{
     
 font-family: 'Lato';
@@ -247,13 +284,17 @@ text-align: center;
       box-shadow: 0px 32px 45px rgba(0, 0, 0, 0.08);
         border-radius: 6px;
         margin-top: 10px;
+        
     }
     .location-arrow{
       width: 34px;
       height: 34px;
       background-color: #D81200;
     }
-   
+    .frame-class{
+      width:600px;
+       height:450px;
+   }
   }
 
   //sixith section 
@@ -302,10 +343,10 @@ flex-direction: column;
     }
     .sub-header{
       font-family: 'Lato';
-font-size: 40px;
-font-weight: 400;
-line-height: 48px;
-margin-left: 50px;
+      font-size: 40px;
+      font-weight: 400;
+      line-height: 48px;
+      margin-left: 50px;
 
 color:white;
 .span-color{
@@ -368,12 +409,67 @@ color:white;
   transform: translateX(-25%);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 720px) {
   .carousel-card {
     flex: 0 0 calc(100% / 2);
   }
 
   .carousel-container:hover .carousel-track {
     transform: translateX(-50%);
+  }
+}
+
+@media only screen and (max-width: 720px) {
+
+  .first-section{
+    height: 600px;
+
+    .first-section-header{
+          font-size: 32px;
+       
+    }
+    .first-section-text{
+      font-size: 18px;
+    }
+    .read-more{
+      font-size: 16px;
+    }
+  }
+  .third-section{
+    .section-content{
+      height: 800px;
+    }
+    
+  }
+  .main-header{
+    font-size: 36px;
+  }
+  .secondry-section-text{
+    font-size: 18px;
+  }
+  .fifth-section{
+  .location-card{
+    margin-left: 50px;
+  }
+ 
+  }
+  .sixith-section{
+    height: 900px;
+    .form-container{
+      height: 500px;
+      width: 400px;
+      margin-left: 50px;
+      .submit-button{
+        font-size: 20px;
+    width: 300px;
+    height: 50px;
+    margin-top: 70px;
+    margin-left: 50px;
+  
+      }
+    }
+    .sub-header{
+      font-size: 20px;
+    }
   }
 }

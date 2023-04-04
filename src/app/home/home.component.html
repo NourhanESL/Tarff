@@ -1,10 +1,11 @@
 <!-- First Section -->
-<div class="tarff-container">
+<div class="tarff-container position-relative w-100 overflow-hidden">
 <div class="first-section"  width="100%" >
     <div class="first-section-content container">
   
-    <h1 class="first-section-header" ><span *ngFor="let word of words" class="header-animate">{{ word }} </span>
-    </h1>
+    <div class="first-section-header" >
+      <span *ngFor="let word of words" class="header-animate">{{ word }} </span>
+    </div>
     <div class="first-section-text mx-auto" >Tarff Valley is an Agricultural Merchant supplying
       farmers and the rural community across Southern
       Scotland, Northern England and Ayrshire with a wide
@@ -15,7 +16,7 @@
        from a top range of suppliers.</span>
        <a (click)="toggleContent()" class="read-more d-inline-block">{{showContent ? 'Read less' : 'Read more...'}}</a>
       </div>
-       <div class="row social-media d-flex justify-content-center">
+       <div class=" social-media d-flex justify-content-center">
           <a href="https://www.facebook.com/tarff.valley/" class="icon-link"><img src="../../assets/TarrfWebsite/Icons/SVG/facebook-app-symbol.svg"class="social-icon"/></a>
           <a href="https://twitter.com/TarffValley" class="icon-link"><img src="../../assets/TarrfWebsite/Icons/SVG/twitter (1).svg"class="social-icon"/></a>
           <a href="https://www.linkedin.com/company/tarff-valley" class="icon-link"><img src="../../assets/TarrfWebsite/Icons/SVG/linkedin.svg"class="social-icon"/></a>
@@ -28,7 +29,7 @@
   <div class="second-section container" width="100%">
   <h1 class="main-header">Our Products</h1>
   <div class="secondry-section-text mb-5">Our product range includes Animal Feed, Fertiliser, Animal Health and Equipment, Agronomy, Hardware, Clothing and Footwear and much more. We also offer a number of services such as silage analysis, soil sampling and ration mixes. We are a whole farm solution, providing farmers with all their agricultural needs.</div>
-  <div class="view-all ">View All <span class="view-icon"><svg class="view-icon" width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <div class="view-all w-100"><span >View All <svg class="view-icon" width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path  class="view-icon" d="M1.4 12L0 10.6L4.575 6L0 1.4L1.4 0L7.4 6L1.4 12ZM8 12L6.6 10.6L11.175 6L6.6 1.4L8 0L14 6L8 12Z" fill="#191919"/>
     </svg>
     </span></div>
@@ -37,12 +38,18 @@
     <div class="carousel-track"  #carouselTrack>
       <div class="carousel-card position-relative" *ngFor="let card of Cards" 
       style="background-image: url('{{ card.backgroundImg }}');">
-      <div class="card-title">{{card.cardTitle}}</div>
+     <div class="card-container"> <div class="card-title">{{card.cardTitle}}</div></div>
       </div>
       
     </div>
-    <button class="carousel-nav carousel-nav-prev" (click)="moveCarousel('left')">&#8249;</button>
-   <button class="carousel-nav carousel-nav-next" (click)="moveCarousel('right')">&#8250;</button>
+    <button class="carousel-nav carousel-nav-prev" (click)="moveCarousel('left')">
+      <div class="rounded-circle location-arrow d-flex justify-content-center align-items-center">
+        <img src="../../assets/TarrfWebsite/Icons/SVG/leftArrow.svg" width="10px" ></div>
+    </button>
+   <button class="carousel-nav carousel-nav-next" (click)="moveCarousel('right')">
+    <div class="rounded-circle location-arrow d-flex justify-content-center align-items-center">
+      <img src="../../assets/TarrfWebsite/Icons/SVG/Vector.svg" width="10px" ></div>
+   </button>
   </div>
   <div class="btn all-products mt-4">All Products</div>
   </div>
@@ -53,9 +60,10 @@
     <div class="secondry-section-text mb-5 w-80">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, sint! Magni ab asperiores dolor quidem error corporis qui ratione dolore distinctio. Hic architecto odit et velit animi provident, quidem quaerat?</div>
     <div class="section-content row d-flex justify-content-center align-items-center w-100 ">
     
-      <div class="col-3 ms-5 ">
+      <div class="col-lg-3 my-3 my-lg-0 col-12 col-align">
         <div class="col-img">
-        <img src="../../assets/TarrfWebsite/Icons/SVG/growth.svg">
+        <img src="../../assets/TarrfWebsite/Icons/SVG/growth.svg" class="svg-img">
+        <img src="../../assets/TarrfWebsite/Icons/SVG/growth (1).svg" class="svg-img-hover">
       </div>
         <div class="col-title">silage analysis</div>
         <div class="col-content">Analysis of silage allows 
@@ -66,18 +74,23 @@
           </div>
 
       </div>
-      <div class="col-3 ">
+      <div class="col-lg-3 my-3 my-lg-0 col-12 col-align ">
         <div class="col-img">
-          <img src="../../assets/TarrfWebsite/Icons/SVG/plant.svg">
+          <img src="../../assets/TarrfWebsite/Icons/SVG/plant.svg" class="svg-img">
+          <img src="../../assets/TarrfWebsite/Icons/SVG/plant (2).svg" class="svg-img-hover">
+
         </div>
                 <div class="col-title">soil sampling</div>
         <div class="col-content">Soil testing is an essential component of soil resource management. 
           Each sample collected must be a true representative
            of the area being sampled</div>
       </div>
-      <div class="col-3 ">
+      <div class="col-lg-3 my-3 my-lg-0 col-12 col-align">
         <div class="col-img">
-          <img src="../../assets/TarrfWebsite/Icons/SVG/sapling.svg">
+          <img src="../../assets/TarrfWebsite/Icons/SVG/sapling.svg" class="svg-img">
+          <img src="../../assets/TarrfWebsite/Icons/SVG/sapling (1) 2.svg" class="svg-img-hover">
+
+
         </div>
         <div class="col-title">ration mixes</div>
         <div class="col-content">Soil testing is an essential component of soil resource management. 
@@ -122,7 +135,7 @@
     <h1 class="main-header">Our Branches</h1>
     <div class="secondry-section-text mb-5" >Find Us on Google maps</div>
     <div class="section content row">
-      <div class="col-6">
+      <div class="col-lg-6  col-12 ">
         <div class="location-card">
           <img src="../../assets/TarrfWebsite/Icons/SVG/locationsmall.svg">
           <div>Head Office and Shop
@@ -152,8 +165,8 @@
           <img src="../../assets/TarrfWebsite/Icons/SVG/Vector.svg" width="7px" ></div>
         </div>
       </div>
-      <div class="col-6">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9180.122777591921!2d-4.0501508!3d54.8848297!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4862e61a33741229%3A0x2daf3ce2735e8f9c!2sTarff%20Valley%20Ltd%2C%20Ringford!5e0!3m2!1sen!2seg!4v1680073700369!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="col-lg-6  col-12 mt-5 mt-lg-0">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9180.122777591921!2d-4.0501508!3d54.8848297!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4862e61a33741229%3A0x2daf3ce2735e8f9c!2sTarff%20Valley%20Ltd%2C%20Ringford!5e0!3m2!1sen!2seg!4v1680073700369!5m2!1sen!2seg" width="550" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   </div>
@@ -161,12 +174,12 @@
   <!-- Sixth Section -->
   <div class="sixith-section" width="100%">
     <div class="section-content row">
-      <div class="col-6 ">
+      <div class="col-lg-6 col-12 ">
         <div class="header">Get In Touch With Us</div>
         <div class="sub-header">Keep up with our latest News and 
           events <span class="span-color">Subscribe</span> to our newsletter</div>
       </div>
-      <div class="col-6">
+      <div class="col-lg-6 col-12">
         <div class="form-container">
           <div class="form-elements form-floating ">
             <input type="email" class="form-control border-bottom form-control bg-transparent py-2 border-0 px-0 rounded-0 shadow-none" id="floatingInput" placeholder="name@example.com">

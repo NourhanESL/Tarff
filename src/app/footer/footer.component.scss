@@ -1,3 +1,13 @@
+.footer{
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
 .col-content{
     font-family:'Lato';
 font-size: 16px;
@@ -14,4 +24,33 @@ color:#707070;
     line-height: 19px;
     color:#070B0E;
     
+}
+
+.footer-end{
+    height: 48px;
+    background-color: #070B0E;
+    margin-top: auto;
+
+}
+.end-text{
+    font-family: 'Lato';
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+color: #D81200;
+}
+.icon-link{
+    padding-right: 8px;
+}
+@media (max-width: 768px) {
+    .footer{
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: auto;
+    }
+    .footer-end {
+        width: 100%;
+        height: 40px;
+       
+    }
 }

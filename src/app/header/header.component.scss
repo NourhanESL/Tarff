@@ -3,9 +3,7 @@
    //Navbars styles
     .first-nav{
     background-color:#191919;
-    .navbar-brand{
-      margin-left: 50px;
-    }
+  
       .first-nav-text{
       font-size: 16px;
       font-weight: 400;
@@ -26,7 +24,11 @@
       }
     }
    }
+
+
+   
    .second-nav{
+   
     .nav-item{
       display: inline-block;
         position: relative;
@@ -59,3 +61,35 @@
   
   
    }
+
+   //making navbar responsive
+
+   @media only screen and (max-width:720px){
+    .second-nav{
+      .nav-link {
+        font-size: 16px;
+        color:#D81200;
+
+      }
+      .nav-item{
+        width: 100% !important;
+        text-align: center;
+        margin: 0px !important;
+      }
+      .nav-item :hover{
+        width: 100%;
+        color: #191919;
+        margin: 0px !important;
+    
+      }
+      .nav-item:hover::after{
+        width: 15%;
+        left: 40%;
+      }
+      .navbar{
+        border-radius: 0px 0px 8px 8px !important;
+        width: 100%;
+      }
+    }
+   }
+
