@@ -298,14 +298,11 @@ text-align: center;
   }
 
   //sixith section 
-  .six-section-container{
-    // position: absolute;
-   
-  }
+
   .sixith-section{
     position: relative;
     background-image:url('../../assets/TarrfWebsite/Image/login.jpg') ;
-    background-color: rgba(12, 12, 12, 0.49);
+    background-color: rgba(30, 30, 30, 0.6);
     background-repeat: no-repeat;
     background-size: cover;
     height: 700px;
@@ -313,6 +310,7 @@ text-align: center;
     align-items: center;
     justify-content: center;
     margin-top: 50px;
+    z-index: 1000;
     .form-container{
       height: 595px;
       width: 590px;
@@ -359,6 +357,16 @@ color:white;
   color:#D81200;
 }
     }
+  }
+  .sixith-section::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(12, 12, 12, 0.49);
+    z-index: -1;
   }
 //common styles
   .main-header{
