@@ -2,6 +2,7 @@
     height: 420px;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 
@@ -29,7 +30,10 @@ color:#707070;
 .footer-end{
     height: 48px;
     background-color: #070B0E;
-    margin-top: auto;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    // margin-top: auto;
 
 }
 .end-text{

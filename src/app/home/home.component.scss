@@ -298,8 +298,14 @@ text-align: center;
   }
 
   //sixith section 
+  .six-section-container{
+    // position: absolute;
+   
+  }
   .sixith-section{
-    background:url('../../assets/TarrfWebsite/Image/login.jpg') ;
+    position: relative;
+    background-image:url('../../assets/TarrfWebsite/Image/login.jpg') ;
+    background-color: rgba(12, 12, 12, 0.49);
     background-repeat: no-repeat;
     background-size: cover;
     height: 700px;
